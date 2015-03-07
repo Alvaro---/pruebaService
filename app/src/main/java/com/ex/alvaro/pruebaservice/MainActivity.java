@@ -42,6 +42,16 @@ public class MainActivity extends Activity {
         alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()
                 + (i * 1000), pendingIntent);
         Toast.makeText(this, "Alarm set in " + i + " seconds", Toast.LENGTH_LONG).show();
+
+
+        /*Calendar cal = Calendar.getInstance();
+        cal.setTimeInMillis(System.currentTimeMillis());
+        cal.set (Calendar.HOUR_OF_DAY, timePicker.getCurrentHour());
+        cal.set (Calendar.MINUTE, timePicker.getCurrentMinute());
+        cal.set (Calendar.SECOND, 0);
+
+        AlarmManager aMan = (AlarmManager)getSystemService(ALARM_SERVICE);
+        aMan.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pIntent);*/
     }
 
 }
